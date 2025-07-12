@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna Photography - Book an Appointment</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ 
+  <style>
+    #mobileMenu {
+    transition: all 0.3s ease-in-out;
+  }
+  </style>
+</head>
+
+<body class="bg-cover bg-center" style="background-image: url('images/photo6.jpg');">
+
+  <!-- Header -->
+  <header class="bg-transparent text-center py-6">
+    <div class="mx-auto">
+      <h1 class="text-4xl font-serif font-bold text-purple-800 italic">Krishna Photography</h1>
+      <p class="text-lg text-white font-light italic">Capture your moments with us</p>
+    </div>
+  </header>
+     
+   <!-- MENU container (top-right corner) -->
+<div class="absolute top-4 right-4 z-50">
+  <!-- Hamburger button -->
+  <button onclick="toggleMenu()" class="flex items-center justify-center w-10 h-10 border border-white rounded focus:outline-none">
+    <!-- Hamburger icon -->
+    <span class="text-white text-xl">&#9776;</span> <!-- ☰ Unicode -->
+  </button>
+
+  <!-- Dropdown menu (appears below) -->
+  <nav id="mobileMenu" class="absolute right-0 mt-2 bg-gray-700 text-yellow-300 font-serif text-xl italic shadow-lg rounded p-6 w-80 z-50 hidden">
+    <ul class="menu space-y-3">
+      <li><a href="#home" class="menu-link block hover:text-gray-300 uppercase">Home</a></li>
+      <li><a href="#about us" class="menu-link block hover:text-gray-300 uppercase">About Us</a></li>
+      <li><a href="#gallery" class="menu-link block hover:text-gray-300 uppercase">Gallery</a></li>
+      <li><a href="#blog" class="menu-link block hover:text-gray-300 uppercase">Blog</a></li>
+      <li><a href="#contact us" class="menu-link block hover:text-gray-300 uppercase">Contact</a></li>
+      <li><a href="#your-story" class="menu-link block hover:text-gray-300 uppercase">Your Story</a></li>
+    </ul>
+  </nav>
+</div>
+
+<section id="home" class="relative h-screen w-full overflow-hidden content-section" style="display: block;">
+  <!-- Slideshow images -->
+  <div class="absolute inset-0 z-0">
+    <img src="images/photo1.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" />
+    <img src="images/photo2.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/photo3.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/photo4.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/photo5.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/photo6.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/photo7.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/photo8.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/photo9.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+ <!--Content-->
+  <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-4 mt-[-40px]">
+    <h1 class="text-5xl font-bold mb-6">Welcome to Krishna Photography</h1>
+  
+    <p class="text-lg max-w-2xl mb-4 mt-4">
+      At Krishna Photography, we believe every photograph tells a story. Whether it’s a wedding, a family portrait, or a milestone celebration, our passion lies in capturing the emotion behind every moment.
+    </p>
+  
+    <p class="text-lg max-w-2xl">
+      With a keen eye for detail and years of experience behind the lens, we strive to create timeless imagery that resonates. Explore our work and let us bring your vision to life—one frame at a time.
+    </p>
+  
+    <a
+      href="#gallery"
+      class="inline-block mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded shadow-md transition duration-300">
+      Explore Our Gallery
+    </a>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="about us" class="content-section bg-transparent text-white px-6 py-10" style="display: none;">
+  <h2 class="text-2xl font-bold mb-4">About Us</h2>
+  <p>At Krishna Photography, we are passionate about capturing timeless moments. From weddings to portraits, we aim to tell your story with creativity and care.</p>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="content-section bg-transparent text-white px-6 py-10" style="display: none;">
+  <h2 class="text-2xl font-bold mb-4">Gallery</h2>
+  <p>Browse through a collection of our favorite photographs — from candid shots to professionally staged portraits.</p>
+  <!-- You can add image grid here -->
+</section>
+
+<!-- Blog -->
+<section id="blog" class="content-section bg-transparent text-white px-6 py-10" style="display: none;">
+  <h2 class="text-2xl font-bold mb-4">Blog</h2>
+  <p>Read stories, behind-the-scenes, and tips on how to prepare for a photoshoot, selecting outfits, or choosing locations.</p>
+</section>
+
+<!-- Contact -->
+<section id="contact us" class="content-section bg-transparent text-white px-6 py-10" style="display: none;">
+  <h2 class="text-2xl font-bold mb-4">Contact</h2>
+  <p>You can reach us at <strong>contact@krishnaphoto.com</strong> or follow us on social media. We’d love to hear from you!</p>
+</section>
+
+<!-- Your Story -->
+<section id="your story" class="content-section bg-transparent text-white px-6 py-10" style="display: none;">
+  <h2 class="text-2xl font-bold mb-4">Your Story</h2>
+  <p>Every client has a unique journey. Read testimonials and personal stories from those we've had the honor to photograph.</p>
+</section>
+
+<script src="scripts.js"></script>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 text-sm mt-10 mb-4">
+    &copy; 2025 Krishna Photography. All rights reserved.
+  </footer>
+
+<!-- Script to handle menu and section toggling -->
+<script>
+  // Toggle mobile menu visibility
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+
+  // Wait for DOM to load before attaching event listeners
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.menu-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href').substring(1);
+        const sections = document.querySelectorAll('.content-section');
+
+        sections.forEach(section => section.style.display = 'none');
+
+        const target = document.getElementById(targetId);
+        if (target) target.style.display = 'block';
+
+        document.getElementById('mobileMenu').classList.add('hidden');
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slideshow-image");
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.remove("opacity-0");
+      slides[current].classList.add("opacity-100");
+    }, 5000); // Change every 5 seconds
+  });
+</script>
+</body>
+</html>                            
+
