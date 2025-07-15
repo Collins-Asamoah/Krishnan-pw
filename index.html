@@ -23,49 +23,57 @@
 <body class="bg-white text-black">
 
 <header class="bg-white py-2 shadow-md sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-12 flex items-center justify-between">
-    
-    <!-- Left side menu (hidden on small screens) -->
-    <nav class="hidden md:flex space-x-10 text-lg font-semibold text-black">
-      <a href="#about-us" class="menu-link hover:text-indigo-600">ABOUT-US</a>
-      <a href="#gallery" class="menu-link hover:text-indigo-600">GALLERY</a>
-      <a href="#blog" class="menu-link hover:text-indigo-600">BLOG</a>
+  <div class="max-w-6xl mx-auto px-12">
+    <nav class="flex items-center justify-center">
+      
+      <!-- Left side: 3 menu items -->
+      <div class="flex space-x-10 text-2xl text-lg font-semibold">
+        <a href="#about-us" class="menu-link hover:text-indigo-600">ABOUT-US</a>
+        <a href="#gallery" class="menu-link hover:text-indigo-600">GALLERY</a>
+        <a href="#blog" class="menu-link hover:text-indigo-600">BLOG</a>
+      </div>
+      
+      <!-- Center: Logo -->
+      <div class="flex-shrink-0 mx-20">
+        <a href="#home" class="menu-link">
+          <img src="images/logo.jpg" alt="Krishna Photography Logo" class="h-28" />
+        </a>
+      </div>
+      
+      <!-- Right side: 2 menu items -->
+      <div class="flex space-x-10 text-2xl text-lg font-semibold">
+        <a href="#contact" class="menu-link hover:text-indigo-600">CONTACT</a>
+        <a href="#your-story" class="menu-link hover:text-indigo-600">YOUR-STORY</a>
+      </div>
+      
     </nav>
-
-    <!-- Center: Logo -->
-    <div class="flex-shrink-0 mx-0 md:mx-10">
-      <a href="#home" class="menu-link">
-        <img src="images/logo.jpg" alt="Krishna Photography Logo" class="h-16 md:h-28" />
-      </a>
-    </div>
-
-    <!-- Right side menu (hidden on small screens) -->
-    <nav class="hidden md:flex space-x-10 text-lg font-semibold text-black">
-      <a href="#contact" class="menu-link hover:text-indigo-600">CONTACT</a>
-      <a href="#your-story" class="menu-link hover:text-indigo-600">YOUR-STORY</a>
-    </nav>
-
-    <!-- Hamburger button (visible only on small screens) -->
-    <div class="md:hidden">
-      <button onclick="toggleMenu()" aria-label="Toggle mobile menu" class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded focus:outline-none">
-        <span class="text-black text-2xl">&#9776;</span>
-      </button>
-    </div>
-
   </div>
 
-  <!-- Mobile menu (hidden by default) -->
-  <nav id="mobileMenu" class="md:hidden bg-gray-700 text-yellow-300 font-serif text-xl italic shadow-lg rounded p-6 w-full absolute top-full left-0 z-50 hidden">
-    <ul class="space-y-3">
-      <li><a href="#home" class="menu-link block">Home</a></li>
-      <li><a href="#about-us" class="menu-link block">About-Us</a></li>
-      <li><a href="#gallery" class="menu-link block">Gallery</a></li>
-      <li><a href="#blog" class="menu-link block">Blog</a></li>
-      <li><a href="#contact" class="menu-link block">Contact</a></li>
-      <li><a href="#your-story" class="menu-link block">Your-Story</a></li>
+       <!-- MENU container (top-right corner) -->
+<div class="absolute top-4 right-4 z-50">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <!-- Hamburger button -->
+  <button onclick="toggleMenu()" class="flex items-center justify-center w-10 h-10 border border-white rounded focus:outline-none">
+    <!-- Hamburger icon -->
+    <span class="text-black text-xl">&#9776;</span> <!-- ☰ Unicode -->
+  </button>
+
+  <!-- Dropdown menu (appears below) -->
+  <nav id="mobileMenu" class="absolute right-0 mt-2 bg-gray-700 text-yellow-300 font-serif text-xl italic shadow-lg rounded p-6 w-80 z-50 hidden">
+    <ul class="menu space-y-3">
+      <li><a href="#home" class="menu-link">Home</a></li>
+      <li><a href="#about-us" class="menu-link">About-Us</a></li>
+      <li><a href="#gallery" class="menu-link">Gallery</a></li>
+      <li><a href="#blog" class="menu-link">Blog</a></li>
+      <li><a href="#contact" class="menu-link">Contact</a></li>
+      <li><a href="#Your-Story" class="menu-link">Your-Story</a></li>
     </ul>
   </nav>
-</header> 
+</div>
+</header>  
 
 <section id="home" class="relative h-screen w-full overflow-hidden content-section" style="display: block;">
   <!-- Slideshow images -->
