@@ -1,0 +1,52 @@
+/* === Custom Color Variables (for easier maintenance) === */
+:root {
+  --primary: #d5b2f3;
+  --primary-dark: #d5b2f3;
+  --accent: #61b0c4;
+  --bg-light: #61b0c4;
+  --text-default: #f7f7f7;
+}
+
+/* === Reset and Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  /* Do NOT override bg or text colors here, because you use Tailwind bg-white and text-black */
+  line-height: 1.6;
+  background-color: white; /* Match Tailwind default if needed */
+  color: black;
+}
+
+/* === Header Branding === */
+header {
+  background-color: var(--primary);
+  color: rgb(53, 243, 243);
+  padding: 30px;
+  text-align: left;
+}
+
+header img {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* === Links and buttons === */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* === Other Global Styles === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: black; /* You can override this with Tailwind classes */
+}

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna Photography</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style.css">
+ 
+  <style>
+    #mobileMenu {
+    transition: all 0.3s ease-in-out;
+  }
+  </style>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+<header class="bg-white py-2 shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-12">
+    <nav class="flex items-center justify-center">
+      
+      <!-- Left side: 3 menu items -->
+      <div class="flex space-x-10 text-2xl text-lg font-semibold">
+        <a href="#about-us" class="menu-link hover:text-indigo-600">ABOUT-US</a>
+        <a href="#gallery" class="menu-link hover:text-indigo-600">GALLERY</a>
+        <a href="#blog" class="menu-link hover:text-indigo-600">BLOG</a>
+      </div>
+      
+      <!-- Center: Logo -->
+      <div class="flex-shrink-0 mx-20">
+        <a href="#home" class="menu-link">
+          <img src="images/logo.jpg" alt="Krishna Photography Logo" class="h-28" />
+        </a>
+      </div>
+      
+      <!-- Right side: 2 menu items -->
+      <div class="flex space-x-10 text-2xl text-lg font-semibold">
+        <a href="#contact" class="menu-link hover:text-indigo-600">CONTACT</a>
+        <a href="#your-story" class="menu-link hover:text-indigo-600">YOUR-STORY</a>
+      </div>
+      
+    </nav>
+  </div>
+
+       <!-- MENU container (top-right corner) -->
+<div class="absolute top-4 right-4 z-50">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <!-- Hamburger button -->
+  <button onclick="toggleMenu()" class="flex items-center justify-center w-10 h-10 border border-white rounded focus:outline-none">
+    <!-- Hamburger icon -->
+    <span class="text-black text-xl">&#9776;</span> <!-- ☰ Unicode -->
+  </button>
+
+  <!-- Dropdown menu (appears below) -->
+  <nav id="mobileMenu" class="absolute right-0 mt-2 bg-gray-700 text-yellow-300 font-serif text-xl italic shadow-lg rounded p-6 w-80 z-50 hidden">
+    <ul class="menu space-y-3">
+      <li><a href="#home" class="menu-link">Home</a></li>
+      <li><a href="#about-us" class="menu-link">About-Us</a></li>
+      <li><a href="#gallery" class="menu-link">Gallery</a></li>
+      <li><a href="#blog" class="menu-link">Blog</a></li>
+      <li><a href="#contact" class="menu-link">Contact</a></li>
+      <li><a href="#Your-Story" class="menu-link">Your-Story</a></li>
+    </ul>
+  </nav>
+</div>
+</header>  
+
+<section id="home" class="relative h-screen w-full overflow-hidden content-section" style="display: block;">
+  <!-- Slideshow images -->
+  <div class="absolute inset-0 z-0">
+    <img src="images/HK1.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" />
+    <img src="images/HK2.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="images/HK3.jpg" class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+ <!--Content-->
+  <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-4 mt-[-40px]">
+    <h1 class="text-5xl font-bold mb-6">Welcome to Krishna Photography</h1>
+  
+    <p class="text-lg max-w-2xl mb-4 mt-4">
+      At Krishna Photography, we believe every photograph tells a story. Whether it’s a wedding, a family portrait, or a milestone celebration, our passion lies in capturing the emotion behind every moment.
+    </p>
+  
+    <p class="text-lg max-w-2xl">
+      With a keen eye for detail and years of experience behind the lens, we strive to create timeless imagery that resonates. Explore our work and let us bring your vision to life—one frame at a time.
+    </p>
+    <button
+      onclick="showSection('blog')"
+      class="inline-block mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded shadow-md transition duration-300">
+      Explore Our Blog
+    </button>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="about-us" class="content-section hidden bg-white text-black px-6 py-10">
+
+  <!-- Hey, I'm Krishna -->
+<div class="h-screen bg-cover bg-center relative text-white px-6" style="background-image: url('images/HK4.jpg');">
+  <div class="absolute bottom-6 left-6 bg-black bg-opacity-60 p-8 rounded max-w-3xl text-left">
+    <h2 class="text-4xl font-bold mb-4 text-white">I’m Krishnan</h2>
+    <p class="text-lg">
+      I’m a passionate photographer based in INDIA. What started as a creative hobby has evolved into a meaningful career capturing moments that matter. With every click, I strive to preserve emotions, stories, and beauty that will last a lifetime.
+    </p>
+  </div>
+</div>
+
+        <!-- My Philosophy -->
+  <section class="w-full bg-[#2ca6ad] text-black py-16 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+      <!-- Image on the left -->
+      <div class="flex justify-center">
+        <img src="images/photo4.jpg" alt="My Philosophy" class="rounded shadow-lg max-w-full h-auto" />
+      </div>
+
+    <!-- Text on the right -->
+      <div>
+        <h2 class="text-3xl font-bold mb-4 text-yellow-700">My Philosophy</h2>
+        <p class="text-lg mb-4 text-yellow-700">
+        Photography isn’t just about taking pictures—it’s about telling your story. I focus on authenticity and connection, letting every frame reflect the essence of who you are and the moments you cherish most.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  
+
+  <!-- Why I Do This -->
+  <section class="w-full bg-[#2ca6ad] text-black white py-16 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      
+      <!-- Text Content -->
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Why I Do This</h2>
+        <p class="text-lg mb-4 text-blue-600">
+          Photography is more than just images; it’s a way to preserve emotions, freeze time, and tell stories that matter.
+        </p>
+        <p class="text-lg text-blue-600">
+          I’m passionate about helping people relive their most meaningful moments through beautifully crafted photos. When we connect like friends, it brings out the best in every photo — candid, comfortable, and real.
+        </p>
+      </div>
+  
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img src="images/photo6.jpg" alt="Why I Do This" class="rounded shadow-lg max-w-full h-auto" />
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <div class="h-screen bg-cover bg-center relative text-white" style="background-image: url('images/photo1.jpg');">
+    <div class="absolute bottom-6 left-6 p-8 rounded max-w-3xl text-left">
+      <div class="bg-pink-600 p-6 rounded-lg">
+        <h2 class="text-4xl font-bold mb-6">Testimonials</h2>
+        <div class="space-y-6 text-lg">
+          <p class="text-sm italic">"Krishna captured our wedding day with such heart. Every photo tells a beautiful story!" — Amanda & James</p>
+          <p class="text-sm italic">"His attention to detail is unmatched. Highly professional, warm, and creative." — Manu M.</p>
+          <p class="text-sm italic">"I was nervous about being photographed, but Krishna made me feel comfortable and confident." — Lydia M.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="content-section hidden">
+  <h2 class="text-3xl font-bold text-center mb-2">Gallery</h2>
+  <p class="text-lg text-center max-w-3xl mx-auto mb-8 text-black">
+  A curated collection of some of my all-time favorite captured moments over the years. Take your time to browse—tap any image to enlarge and swipe through the gallery for a closer look at the love, joy, and unforgettable memories I've had the honor of capturing.
+  </p>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
+   
+    <!-- Repeat for all 15 images -->
+    <a href="/images/thumbnail/hk1-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk1-thumb.jpg" alt="gallery Image 1" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk2-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk2-thumb.jpg" alt="gallery Image 2" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk3-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk3-thumb.jpg" alt="gallery Image 3" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk4-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk4-thumb.jpg" alt="gallery Image 4" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/hk5-large.jpg" data-lightbox="gallery">
+      <img src="/images/hk5-thumb.jpg" alt="gallery Image 5" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk6-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk6-thumb.jpg" alt="gallery Image 6" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk7-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk7-thumb.jpg" alt="gallery Image 7" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk8-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk8-thumb.jpg" alt="gallery Image 8" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk9-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk9-thumb.jpg" alt="gallery Image 9" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk10-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk10-thumb.jpg" alt="gallery Image 10" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk11-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk11-thumb.jpg" alt="gallery Image 11" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk12-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk12-thumb.jpg" alt="gallery Image 12" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk13-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk13-thumb.jpg" alt="gallery Image 13" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk14-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk14-thumb.jpg" alt="gallery Image 14" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <a href="/images/thumbnail/hk15-large.jpg" data-lightbox="gallery">
+      <img src="/images/thumbnail/hk15-thumb.jpg" alt="gallery Image 15" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" />
+    </a>
+    <!-- ... repeat up to hk15 -->
+  </div>
+</section>
+
+<!-- Blog -->
+<section id="blog" class="content-section hidden">
+  <div class="min-h-screen bg-cover bg-center relative text-white px-6 py-20" style="background-image: url('images/photo7.jpg');">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-10 text-black">
+        Welcome to my <span class="text-black">Blog</span>
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-10 relative z-10">
+
+        <!-- NATURE Dropdown -->
+        <div class="relative">
+          <button onclick="toggleDropdown('natureDropdown')" class="bg-pink-600 text-white font-semibold tracking-widest px-6 py-3 rounded-full shadow-md hover:bg-yellow-600 transition">
+            NATURE
+          </button>
+          <div id="natureDropdown" class="dropdown-content hidden absolute left-1/2 -translate-x-1/2 top-full mt-2 w-44 z-50 bg-white text-black text-sm rounded shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Forests</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Mountains</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Sunsets</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Beaches & Water Bodies</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Animals</a>
+          </div>
+        </div>
+
+        <!-- WEDDINGS Dropdown -->
+        <div class="relative">
+          <button onclick="toggleDropdown('weddingsDropdown')" class="bg-pink-600 text-white font-semibold tracking-widest px-6 py-3 rounded-full shadow-md hover:bg-yellow-600 transition">
+            WEDDINGS
+          </button>
+          <div id="weddingsDropdown" class="dropdown-content hidden absolute left-1/2 -translate-x-1/2 top-full mt-2 w-44 z-50 bg-white text-black text-sm rounded shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Pre-Wedding</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Ceremony</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Reception</a>
+          </div>
+        </div>
+
+        <!-- OTHER EVENTS Dropdown -->
+        <div class="relative">
+          <button onclick="toggleDropdown('eventsDropdown')" class="bg-pink-600 text-white font-semibold tracking-widest px-6 py-3 rounded-full shadow-md hover:bg-yellow-600 transition">
+            OTHER EVENTS
+          </button>
+          <div id="eventsDropdown" class="dropdown-content hidden absolute left-1/2 -translate-x-1/2 top-full mt-2 w-44 z-50 bg-white text-black text-sm rounded shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Birthdays</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Corporate</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-600 cursor-pointer">Festivals</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="content-section hidden">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4">Contact</h2>
+    <p class="text-lg mb-6">
+      If you’re looking to book a photoshoot, have a question about availability, or just want to connect, please don’t hesitate to get in touch using the form below.
+    </p>
+    <p class="text-lg mb-12">
+      Alternatively, you can reach me directly by email at
+      <a href="mailto:hello@krishnaphotography.com" class="text-blue-600 hover:underline">
+        hello@krishnaphotography.com
+      </a>.
+    </p>
+
+    <form action="#" method="POST" class="space-y-6 text-left max-w-2xl mx-auto">
+      <div>
+        <label for="name" class="block text-sm font-semibold mb-1">Name</label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-semibold mb-1">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Your Story -->
+<section id="your-story" class="content-section bg-transparent text-white px-6 py-10" style="display: none;">
+  <h2 class="text-2xl font-bold mb-4">Your Story</h2>
+  <p>Every client has a unique journey. Read testimonials and personal stories from those we've had the honor to photograph.</p>
+</section>
+
+<script src="scripts.js"></script>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 text-sm mt-10 mb-4">
+    &copy; 2025 Krishna Photography. All rights reserved.
+  </footer>
+
+<!-- Script to handle menu and section toggling -->
+<script>
+  // Toggle mobile menu visibility
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+
+  // Wait for DOM to load before attaching event listeners
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.menu-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href').substring(1);
+        const sections = document.querySelectorAll('.content-section');
+
+        sections.forEach(section => section.style.display = 'none');
+
+        const target = document.getElementById(targetId);
+        if (target) target.style.display = 'block';
+
+        document.getElementById('mobileMenu').classList.add('hidden');
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slideshow-image");
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.remove("opacity-0");
+      slides[current].classList.add("opacity-100");
+    }, 5000); // Change every 5 seconds
+  });
+</script>
+
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({ selector: '[data-lightbox="gallery"]' });
+</script>
+
+
+<script>
+  function showBlog() {
+    // Hide all sections if needed
+    document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+
+    // Show the blog section
+    document.getElementById('blog').classList.remove('hidden');
+
+    // Scroll into view smoothly
+    document.getElementById('blog').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+ <!--Dropdown Logic-->
+<script>
+  function toggleDropdown(id) {
+    // Close all dropdowns first
+    document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+      if (dropdown.id !== id) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+    // Toggle the selected dropdown
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden');
+  }
+
+  // Optional: Close dropdowns if clicked outside
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.relative')) {
+      document.querySelectorAll('.dropdown-content').forEach(dropdown => dropdown.classList.add('hidden'));
+    }
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+</script>
+
+<script>
+  // JavaScript Slideshow Logic
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slideshow-image');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? '1' : '0';
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  // Initial display
+  showSlide(currentSlide);
+
+  // Change slide every 5 seconds
+  setInterval(nextSlide, 5000);
+</script>
+
+
+<!-- Script to hide Blog Dropdown Menu on outside click-->
+<script>
+  // Store reference to currently open dropdown
+  let openDropdown = null;
+
+  function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+
+    // Close any open dropdown if it's not the same
+    if (openDropdown && openDropdown !== dropdown) {
+      openDropdown.classList.add('hidden');
+    }
+
+    // Toggle visibility
+    dropdown.classList.toggle('hidden');
+
+    // Update the currently open dropdown
+    openDropdown = dropdown.classList.contains('hidden') ? null : dropdown;
+  }
+
+  // Close dropdown if clicking outside
+  document.addEventListener('click', function (event) {
+    if (openDropdown && !openDropdown.contains(event.target) && !event.target.closest('button')) {
+      openDropdown.classList.add('hidden');
+      openDropdown = null;
+    }
+  });
+</script>
+
+<script>
+  function showSection(id) {
+    // Hide all sections first
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('hidden');
+    });
+
+    // Show the section by ID
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.remove('hidden');
+      target.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.warn("Section with ID '" + id + "' not found.");
+    }
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".menu-link");
+    const sections = document.querySelectorAll(".section");
+
+    function showSection(id) {
+      sections.forEach(sec => {
+        sec.classList.add("hidden");
+      });
+
+      const target = document.querySelector(id);
+      if (target) {
+        target.classList.remove("hidden");
+      }
+    }
+
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("href");
+        showSection(targetId);
+        history.replaceState(null, "", targetId); // update URL hash
+      });
+    });
+
+    // Show section on page load based on hash
+    const currentHash = window.location.hash || "#home";
+    showSection(currentHash);
+  });
+</script>
+
+
+ <!--Script  to allow the "Explore our Gallery" to function-->
+<script>
+  function showSection(sectionId) {
+    // Hide all sections with class 'content-section'
+    document.querySelectorAll('.content-section').forEach(section => {
+      section.style.display = 'none';
+    });
+
+    // Show the section with the given ID
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.style.display = 'block';
+    }
+  }
+</script>
+</body>
+</html>                            
+
