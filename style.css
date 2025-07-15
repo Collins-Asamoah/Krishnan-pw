@@ -1,0 +1,35 @@
+/* === Custom Color Variables (for easier maintenance) === */
+:root {
+    --primary: #d5b2f3;
+    --primary-dark: #d5b2f3;
+    --accent: #61b0c4;
+    --bg-light: #61b0c4;
+    --text-default: #f7f7f7;
+  }
+  
+  /* === Reset and Base Styles === */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-default);
+    line-height: 1.6;
+  }
+  
+  /* === Header Branding === */
+  header {
+    background-color: var(--primary);
+    color: rgb(53, 243, 243);
+    padding: 30px;
+    text-align: left;
+  }
+  
+  header img {
+    height: 64px;
+    margin-bottom: 10px;
+  }

@@ -40,3 +40,5 @@ document.querySelectorAll('.menu-link').forEach(link => {
     }
   });
 });
+
+// this is my js
