@@ -79,9 +79,21 @@
   <!-- Dark overlay -->
   <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
 
- <!--Content-->
+  <!--Content-->
   <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-4 mt-[-40px]">
-    <h1 class="text-5xl font-bold mb-6">Welcome to HariKrishnan Photography</h1>
+    <h1 class="text-5xl font-bold mb-6 text-center">Welcome to HariKrishnan Photography</h1>
+
+    <!-- WhatsApp Button aligned right inside the container -->
+    <div class="w-full flex justify-end pr-6 mt-4">
+      <a href="https://wa.me/15551234567?text=Hello%20HariKrishnan%20Photography%2C%20I%27d%20like%20to%20book%20a%20session" target="_blank">
+        <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M20.52 3.48A11.902 11.902 0 0 0 3.5 20.5L2 24l3.5-1.5A11.902 11.902 0 0 0 20.52 3.48zM12 21.5a9.5 9.5 0 1 1 0-19 9.5 9.5 0 0 1 0 19zm3.75-6.19c-.17-.09-1.04-.52-1.2-.58-.16-.06-.28-.09-.4.09-.12.17-.46.58-.56.7-.1.12-.21.13-.39.04s-.75-.28-1.42-.9c-.52-.46-.87-1.02-.97-1.19-.1-.17-.01-.26.08-.35.08-.08.17-.21.26-.31.09-.1.12-.17.18-.29.06-.12.03-.22-.01-.31-.04-.09-.4-1.01-.55-1.39-.15-.36-.3-.31-.4-.32l-.34-.01c-.12 0-.31.04-.48.22s-.63.61-.63 1.49c0 .87.65 1.71.74 1.83.09.12 1.28 1.96 3.12 2.75.44.19.79.3 1.06.38.45.14.86.12 1.18.07.36-.05 1.1-.45 1.25-.89.15-.43.15-.8.1-.88-.05-.08-.15-.12-.32-.21z"/>
+          </svg>
+          Chat
+        </button>
+      </a>
+    </div>
   
     <p class="text-lg max-w-2xl mb-4 mt-4">
       At HariKrishnan Photography, we believe every photograph tells a story. Whether it’s a wedding, a family portrait, or a milestone celebration, our passion lies in capturing the emotion behind every moment.
@@ -90,6 +102,7 @@
     <p class="text-lg max-w-2xl">
       With a keen eye for detail and years of experience behind the lens, we strive to create timeless imagery that resonates. Explore our work and let us bring your vision to life—one frame at a time.
     </p>
+
     <button
       onclick="showSection('blog')"
       class="inline-block mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded shadow-md transition duration-300">
