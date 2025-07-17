@@ -46,26 +46,26 @@
         <a href="#your-story" class="menu-link hover:text-indigo-600">YOUR-STORY</a>
       </div>
 
-      <!-- Mobile Hamburger Button -->
-      <div class="lg:hidden">
-        <button onclick="toggleMenu()" class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded focus:outline-none">
-          <span class="text-black text-xl">&#9776;</span> <!-- ☰ -->
-        </button>
-      </div>
-    </nav>
-  </div>
+<div class="lg:hidden relative">
+  <!-- Button -->
+  <button onclick="toggleMenu()" class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded focus:outline-none">
+    <span class="text-black text-xl">&#9776;</span> <!-- ☰ -->
+  </button>
 
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobileMenu" class="lg:hidden absolute top-full right-4 mt-2 bg-gray-700 text-yellow-300 font-serif text-xl italic shadow-lg rounded p-6 w-72 z-50 hidden">
+  <!-- Dropdown (now positioned relative to button) -->
+  <div id="mobileMenu" class="absolute top-full right-0 mt-2 bg-gray-700 text-yellow-300 font-serif text-xl italic shadow-lg rounded p-6 w-72 z-50 hidden">
     <ul class="menu space-y-3 text-center">
       <li><a href="#home" class="menu-link">Home</a></li>
-      <li><a href="#about-us" class="menu-link">About-Us</a></li>
+      <li><a href="#about-us" class="menu-link">About Us</a></li>
       <li><a href="#gallery" class="menu-link">Gallery</a></li>
       <li><a href="#blog" class="menu-link">Blog</a></li>
       <li><a href="#contact" class="menu-link">Contact</a></li>
-      <li><a href="#your-story" class="menu-link">Your-Story</a></li>
+      <li><a href="#your-story" class="menu-link">Your Story</a></li>
     </ul>
   </div>
+</div>
+</nav>
+</div>
 </header>
 
 <section id="home" class="relative h-screen w-full overflow-hidden content-section" style="display: block;">
