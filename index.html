@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> HariKrishnan Photography</title>
+
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6TZ20R7J1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B6TZ20R7J1');
+  </script>
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Your custom CSS -->
   <link rel="stylesheet" href="style.css">
@@ -321,11 +332,25 @@
         <label for="message" class="block text-sm font-semibold mb-1">Message</label>
         <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
       </div>
+
       <div class="text-center">
         <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition">
           Send Message
         </button>
       </div>
+      
+            <!-- WhatsApp Button at bottom-right of the page -->
+      <div class="flex justify-end pr-6 mt-10">
+        <a href="https://wa.me/+447793964085?text=Hello%20HariKrishnan%20Photography%2C%20I%27d%20like%20to%20book%20a%20session" target="_blank">
+          <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M20.52 3.48A11.902 11.902 0 0 0 3.5 20.5L2 24l3.5-1.5A11.902 11.902 0 0 0 20.52 3.48zM12 21.5a9.5 9.5 0 1 1 0-19 9.5 9.5 0 0 1 0 19zm3.75-6.19c-.17-.09-1.04-.52-1.2-.58-.16-.06-.28-.09-.4.09-.12.17-.46.58-.56.7-.1.12-.21.13-.39.04s-.75-.28-1.42-.9c-.52-.46-.87-1.02-.97-1.19-.1-.17-.01-.26.08-.35.08-.08.17-.21.26-.31.09-.1.12-.17.18-.29.06-.12.03-.22-.01-.31-.04-.09-.4-1.01-.55-1.39-.15-.36-.3-.31-.4-.32l-.34-.01c-.12 0-.31.04-.48.22s-.63.61-.63 1.49c0 .87.65 1.71.74 1.83.09.12 1.28 1.96 3.12 2.75.44.19.79.3 1.06.38.45.14.86.12 1.18.07.36-.05 1.1-.45 1.25-.89.15-.43.15-.8.1-.88-.05-.08-.15-.12-.32-.21z"/>
+            </svg>
+            Chat
+          </button>
+        </a>
+      </div>
+
     </form>
   </div>
 </section>
